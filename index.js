@@ -1,4 +1,4 @@
-const { PayClient } = require("demo-pay");
+const { PayClient } = require("./demo-pay");
 
 const client = new PayClient();
 
