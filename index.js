@@ -3,7 +3,7 @@ const { PayClient } = require("./demo-pay");
 const client = new PayClient();
 
 async function pay(amount) {
-  return client.charges.create({
+  return client.charges.createPayment({
     amount,
     currency: "usd",
     source: "tok_visa",
