@@ -7,9 +7,9 @@ test("charge uses the current payment_method field", async () => {
   assert.strictEqual(charge.payment_method, "tok_visa");
 });
 
-test("the old 'source' field is no longer sent", async () => {
+test("the old 'payment_method' field is no longer sent", async () => {
   const charge = await pay(1000);
-  assert.strictEqual(charge.source, undefined);
+  assert.strictEqual(charge.payment_method, undefined);
 });
 
 test("amount is passed through", async () => {
